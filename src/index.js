@@ -20,7 +20,7 @@
 
 'use strict';
 
-import * as ecc from 'eosjs-ecc';
+var ecc = require('eosjs-ecc');
 
 class EosError extends Error {
     constructor(json) {
@@ -522,5 +522,5 @@ class Api {
     }
 } // Api
 
-export { ecc, EosError, EosBuffer, Api, dateToSec, secToDate, serializeUnknown, deserializeUnknown, serializeStruct, deserializeStruct, serializeArray, deserializeArray, createType, getType, getTypesFromAbi, createInitialTypes, transactionHeader, };
+module.exports = { ecc, EosError, EosBuffer, Api, dateToSec, secToDate, serializeUnknown, deserializeUnknown, serializeStruct, deserializeStruct, serializeArray, deserializeArray, createType, getType, getTypesFromAbi, createInitialTypes, transactionHeader, };
 global.eos_altjs = { ecc, EosError, EosBuffer, Api, dateToSec, secToDate, serializeUnknown, deserializeUnknown, serializeStruct, deserializeStruct, serializeArray, deserializeArray, createType, getType, getTypesFromAbi, createInitialTypes, transactionHeader, };
